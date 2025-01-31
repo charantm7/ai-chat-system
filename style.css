@@ -1,0 +1,235 @@
+.vorex {
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --white: white;
+  --lwhite: #cacaca;
+  --black: black;
+  --green: green;
+  --body: #292a2d;
+  --border: #212327;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr 30%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "navbar" "border" "main" "foot";
+  background-color: var(--body);
+  color: var(--white);
+}
+body nav {
+  grid-area: navbar;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 40px;
+  color: var(--white);
+}
+body nav .nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+body nav .nav-left img {
+  height: 42px;
+  width: 40px;
+}
+body nav .nav-left p {
+  font-size: 1.5vw;
+}
+body nav .nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  font-size: 1vw;
+}
+body nav .nav-right .faq-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+body nav .nav-right .faq-icon i {
+  font-size: 13px;
+  cursor: pointer;
+}
+body nav .nav-right .faq-icon a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--wh);
+}
+body nav .nav-right .faq-icon a:hover {
+  text-decoration: underline;
+}
+body nav .nav-right .menubtn {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 4px;
+}
+body nav .nav-right .menubtn .bar1,
+body nav .nav-right .menubtn .bar3 {
+  width: 25px;
+  height: 2.5px;
+  background-color: var(--white);
+  margin: 1.1px 0;
+  transition: 0.5s ease;
+  border-radius: 5px;
+}
+body nav .nav-right .menubtn .bar2 {
+  width: 18px;
+  height: 2.5px;
+  background-color: var(--white);
+  margin: 1.1px 0;
+  transition: 0.5s ease;
+  border-radius: 5px;
+}
+body nav .nav-right .menubtn.change .bar1 {
+  transform: translate(0, 8.2px) rotate(-45deg);
+}
+body nav .nav-right .menubtn.change .bar2 {
+  opacity: 0;
+}
+body nav .nav-right .menubtn.change .bar3 {
+  transform: translate(0, -8.2px) rotate(45deg);
+}
+@media (max-width: 576px) {
+  body nav {
+    padding: 10px 20px;
+  }
+  body nav .nav-left img {
+    width: 40px;
+    height: 40px;
+  }
+  body nav .nav-left p {
+    font-size: 4.5vw;
+  }
+  body nav .nav-right {
+    font-size: 3vw;
+    gap: 15px;
+  }
+  body nav .nav-right .menubtn {
+    gap: 1.8px;
+  }
+  body nav .nav-right .menubtn [class^=bar] {
+    width: 20px;
+    height: 2px;
+  }
+  body nav .nav-right .menubtn.change .bar1 {
+    transform: translate(0, 6.1px) rotate(-45deg);
+  }
+  body nav .nav-right .menubtn.change .bar2 {
+    opacity: 0;
+  }
+  body nav .nav-right .menubtn.change .bar3 {
+    transform: translate(0, -6.1px) rotate(45deg);
+  }
+}
+body .border {
+  grid-area: border;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+}
+body .border .b1 {
+  width: 95%;
+  height: 2px;
+  background-color: var(--border);
+}
+body main {
+  grid-area: main;
+  height: 100vh;
+  border: 1px solid var(--lwhite);
+  padding: 40px;
+}
+body footer {
+  grid-area: foot;
+  border-top: 2px solid var(--border);
+  display: flex;
+  flex-direction: row;
+}
+body footer .foot-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body footer .foot-left .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  gap: 8px;
+}
+body footer .foot-left .logo img {
+  height: 42px;
+  width: 40px;
+}
+body footer .foot-left .logo p {
+  font-size: 1.5vw;
+}
+body footer .foot-left .copyrights {
+  width: 40%;
+  color: var(--lwhite);
+}
+body footer .foot-left .devcontact {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--lwhite);
+}
+body footer .foot-left .devcontact [class^=c-] {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+body footer .foot-left .devcontact [class^=c-] a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+body footer .foot-left .devcontact [class^=c-] a:hover {
+  text-decoration: underline;
+}
+body footer .foot-right {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  gap: 15%;
+}
+body footer .foot-right [class^=r-] {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 5px;
+}
+body footer .foot-right [class^=r-] p {
+  margin-bottom: 5px;
+}
+body footer .foot-right [class^=r-] a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+body footer .foot-right [class^=r-] a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
