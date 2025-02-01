@@ -13,39 +13,34 @@
   --border: #212327;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+html {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+p {
+  all: unset;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto auto 1fr 30%;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "navbar"
-    "border"
-    "main"
-    "foot";
+  display: flex;
+  flex-direction: column;
   background-color: var(--body);
   color: var(--white);
+  min-height: 100vh;
 
   nav {
-    grid-area: navbar;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 20px 40px;
     color: var(--white);
 
-    .nav-left {
+    .nav_left {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 10px;
-
-      display: flex;
-      align-items: center;
       img {
         height: 42px;
         width: 40px;
@@ -159,43 +154,49 @@ body {
       }
     }
   }
-  .border {
-    grid-area: border;
+  main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-
-    .b1 {
-      width: 95%;
-      height: 2px;
-      background-color: var(--border);
+    flex-direction: column;
+    margin-top: 50px;
+    .landing_1 {
+      border: 1px solid white;
+      background-image: url("assests/b.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      p {
+        margin-top: 80px;
+      }
+      .str-content {
+        p {
+          margin-top: 100px;
+        }
+      }
     }
   }
-  main {
-    grid-area: main;
-    height: 100vh;
-    border: 1px solid var(--lwhite);
-    padding: 40px;
-  }
   footer {
-    grid-area: foot;
     border-top: 2px solid var(--border);
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
     .foot-left {
       width: 40%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: start;
       justify-content: center;
       gap: 20px;
       .logo {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 40%;
         gap: 8px;
+        margin-left: 100px;
         img {
           height: 42px;
           width: 40px;
@@ -205,18 +206,21 @@ body {
         }
       }
       .copyrights {
-        width: 40%;
+        display: flex;
+        flex-direction: row;
         color: var(--lwhite);
+        margin-left: 100px;
       }
       .devcontact {
-        width: 40%;
         display: flex;
         flex-direction: column;
         gap: 10px;
         color: var(--lwhite);
+        margin-left: 100px;
         [class^="c-"] {
           display: flex;
           flex-direction: row;
+          align-items: center;
           gap: 5px;
           a {
             text-decoration: none;
@@ -238,8 +242,7 @@ body {
       [class^="r-"] {
         display: flex;
         flex-direction: column;
-        margin-top: 80px;
-        gap: 5px;
+        gap: 15px;
         p {
           margin-bottom: 5px;
         }
