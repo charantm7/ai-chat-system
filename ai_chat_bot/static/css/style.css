@@ -8,10 +8,14 @@
 :root {
   --white: white;
   --lwhite: #cacaca;
+  --llwhite: #88858555;
   --black: black;
   --green: green;
+  --body1: #161619;
   --body: #292a2d;
+  --bodyh: #232426;
   --border: #212327;
+  --side-bar-bg-hover: #d3d1d114;
 }
 
 html ::-webkit-scrollbar {
@@ -22,12 +26,16 @@ p {
   all: unset;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
   background-color: var(--body);
   color: var(--white);
-  min-height: 100vh;
 }
 body nav {
   display: flex;
@@ -46,8 +54,10 @@ body nav .nav_left img {
   height: 42px;
   width: 40px;
 }
-body nav .nav_left p {
+body nav .nav_left a {
   font-size: 1.5vw;
+  text-decoration: none;
+  color: var(--white);
 }
 body nav .nav-right {
   display: flex;
@@ -140,102 +150,88 @@ body nav .nav-right .menubtn.change .bar3 {
     transform: translate(0, -6.1px) rotate(45deg);
   }
 }
-body main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
+body #sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bodyh);
+  transition: 0.8s ease-in-out;
+  z-index: 9999;
+  border-radius: 8px;
 }
-body main .landing_1 {
-  border: 1px solid white;
-  background-image: url("assests/b.jpg");
-  background-size: cover;
-  background-position: center;
+body #sidebar .aside-top {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--llwhite);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  height: 100%;
-}
-body main .landing_1 p {
-  margin-top: 80px;
-}
-body main .landing_1 .str-content p {
-  margin-top: 100px;
-}
-body footer {
-  border-top: 2px solid var(--border);
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-}
-body footer .foot-left {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
   gap: 20px;
 }
-body footer .foot-left .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  margin-left: 100px;
-}
-body footer .foot-left .logo img {
-  height: 42px;
-  width: 40px;
-}
-body footer .foot-left .logo p {
-  font-size: 1.5vw;
-}
-body footer .foot-left .copyrights {
-  display: flex;
-  flex-direction: row;
-  color: var(--lwhite);
-  margin-left: 100px;
-}
-body footer .foot-left .devcontact {
+body #sidebar .aside-top .menubtn {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+body #sidebar .aside-top .menubtn .bar1 {
+  transform: translate(0, 3.8px) rotate(-45deg);
+  width: 20px;
+  height: 3px;
+  background-color: var(--lwhite);
+}
+body #sidebar .aside-top .menubtn .bar2 {
+  transform: translate(0, -3.8px) rotate(45deg);
+  width: 20px;
+  height: 3px;
+  background-color: var(--lwhite);
+}
+body #sidebar .aside-top .menubtn:hover {
+  background-color: var(--side-bar-bg-hover);
+}
+body #sidebar .aside-top .menubtn:hover .bar1,
+body #sidebar .aside-top .menubtn:hover .bar2 {
+  background-color: red;
+}
+body #sidebar .aside-mid {
+  padding: 15px;
+}
+body #sidebar .aside-mid a,
+body #sidebar .aside-mid p {
+  display: block;
+  margin-bottom: 10px;
   color: var(--lwhite);
-  margin-left: 100px;
-}
-body footer .foot-left .devcontact [class^=c-] {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-}
-body footer .foot-left .devcontact [class^=c-] a {
   text-decoration: none;
+  padding: 7px 0px 7px 15px;
+  transition: 0.2s ease-in;
+}
+body #sidebar .aside-mid p:hover,
+body #sidebar .aside-mid a:hover {
+  background-color: var(--side-bar-bg-hover);
+  border-radius: 6px;
+  color: var(--white);
+}
+body #sidebar .aside-bottom {
+  position: absolute;
+  padding: 15px;
+  bottom: 0;
+  width: 100%;
+}
+body #sidebar .aside-bottom a {
+  display: block;
+  margin-bottom: 10px;
   color: var(--lwhite);
-}
-body footer .foot-left .devcontact [class^=c-] a:hover {
-  text-decoration: underline;
-}
-body footer .foot-right {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: first baseline;
-  gap: 15%;
-}
-body footer .foot-right [class^=r-] {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-body footer .foot-right [class^=r-] p {
-  margin-bottom: 5px;
-}
-body footer .foot-right [class^=r-] a {
   text-decoration: none;
-  color: var(--lwhite);
+  padding: 7px 0px 7px 15px;
+  transition: 0.2s ease-in;
 }
-body footer .foot-right [class^=r-] a:hover {
-  text-decoration: underline;
+body #sidebar .aside-bottom a:hover {
+  background-color: var(--side-bar-bg-hover);
+  border-radius: 6px;
+  color: var(--white);
+}
+body #sidebar.open {
+  right: 0;
 }/*# sourceMappingURL=style.css.map */

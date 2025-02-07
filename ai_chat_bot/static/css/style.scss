@@ -7,10 +7,14 @@
 :root {
   --white: white;
   --lwhite: #cacaca;
+  --llwhite: #88858555;
   --black: black;
   --green: green;
+  --body1: #161619;
   --body: #292a2d;
+  --bodyh: #232426;
   --border: #212327;
+  --side-bar-bg-hover: #d3d1d114;
 }
 
 html {
@@ -21,13 +25,16 @@ html {
 p {
   all: unset;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   display: flex;
   flex-direction: column;
   background-color: var(--body);
   color: var(--white);
-  min-height: 100vh;
 
   nav {
     display: flex;
@@ -46,8 +53,10 @@ body {
         width: 40px;
       }
 
-      p {
+      a {
         font-size: 1.5vw;
+        text-decoration: none;
+        color: var(--white);
       }
     }
     .nav-right {
@@ -154,106 +163,97 @@ body {
       }
     }
   }
-  main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    .landing_1 {
-      border: 1px solid white;
-      background-image: url("assests/b.jpg");
-      background-size: cover;
-      background-position: center;
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--bodyh);
+    transition: 0.8s ease-in-out;
+    z-index: 9999;
+    border-radius: 8px;
+
+    .aside-top {
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--llwhite);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      height: 100%;
-      p {
-        margin-top: 80px;
-      }
-      .str-content {
-        p {
-          margin-top: 100px;
+      flex-direction: row;
+      gap: 20px;
+
+      .menubtn {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        padding: 10px 10px;
+        cursor: pointer;
+        .bar1 {
+          transform: translate(0, 3.8px) rotate(-45deg);
+          width: 20px;
+          height: 3px;
+          background-color: var(--lwhite);
         }
+
+        .bar2 {
+          transform: translate(0, -3.8px) rotate(45deg);
+          width: 20px;
+          height: 3px;
+          background-color: var(--lwhite);
+        }
+      }
+      .menubtn:hover {
+        background-color: var(--side-bar-bg-hover);
+        .bar1,
+        .bar2 {
+          background-color: red;
+        }
+      }
+    }
+
+    .aside-mid {
+      padding: 15px;
+      a,
+      p {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--lwhite);
+        text-decoration: none;
+        padding: 7px 0px 7px 15px;
+        transition: 0.2s ease-in;
+      }
+      p:hover,
+      a:hover {
+        background-color: var(--side-bar-bg-hover);
+        border-radius: 6px;
+        color: var(--white);
+      }
+    }
+
+    .aside-bottom {
+      position: absolute;
+      padding: 15px;
+      bottom: 0;
+      width: 100%;
+      a {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--lwhite);
+        text-decoration: none;
+        padding: 7px 0px 7px 15px;
+        transition: 0.2s ease-in;
+      }
+      a:hover {
+        background-color: var(--side-bar-bg-hover);
+        border-radius: 6px;
+        color: var(--white);
       }
     }
   }
-  footer {
-    border-top: 2px solid var(--border);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    .foot-left {
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-      gap: 20px;
-      .logo {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        margin-left: 100px;
-        img {
-          height: 42px;
-          width: 40px;
-        }
-        p {
-          font-size: 1.5vw;
-        }
-      }
-      .copyrights {
-        display: flex;
-        flex-direction: row;
-        color: var(--lwhite);
-        margin-left: 100px;
-      }
-      .devcontact {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        color: var(--lwhite);
-        margin-left: 100px;
-        [class^="c-"] {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          gap: 5px;
-          a {
-            text-decoration: none;
-            color: var(--lwhite);
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-    .foot-right {
-      width: 60%;
-      display: flex;
-      flex-direction: row;
-      justify-content: first baseline;
-      gap: 15%;
 
-      [class^="r-"] {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        p {
-          margin-bottom: 5px;
-        }
-        a {
-          text-decoration: none;
-          color: var(--lwhite);
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+  #sidebar.open {
+    right: 0;
   }
 }

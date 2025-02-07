@@ -1,0 +1,176 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.main .landing_1 {
+  background-image: url("assets/b.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.main .landing_1 p {
+  margin-top: 80px;
+}
+.main .landing_1 .str-content p {
+  margin-top: 100px;
+}
+.main .landing_1 .str-content {
+  display: flex;
+  height: 100vh;
+  align-items: end;
+  margin-bottom: 30px;
+}
+.main .landing_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+.main .landing_2 .new-chat,
+.main .landing_2 .auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
+  width: 30%;
+  gap: 8px;
+  transition: transform 1s ease-in-out, background-color 1s, box-shadow 1s;
+  box-shadow: 0 0 10px rgb(80, 80, 80);
+}
+.main .landing_2 .new-chat .chat-1,
+.main .landing_2 .new-chat .auth-1,
+.main .landing_2 .auth .chat-1,
+.main .landing_2 .auth .auth-1 {
+  font-size: 1.5vw;
+  margin-left: 20%;
+  text-decoration: none;
+  color: var(--white);
+}
+.main .landing_2 .new-chat .chat-1:hover,
+.main .landing_2 .new-chat .auth-1:hover,
+.main .landing_2 .auth .chat-1:hover,
+.main .landing_2 .auth .auth-1:hover {
+  text-decoration: underline;
+}
+.main .landing_2 .new-chat p,
+.main .landing_2 .new-chat small,
+.main .landing_2 .auth p,
+.main .landing_2 .auth small {
+  margin-left: 20%;
+  font-size: 12px;
+  color: var(--lwhite);
+}
+.main .landing_2 .new-chat .auth-2,
+.main .landing_2 .auth .auth-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 20%;
+}
+.main .landing_2 .new-chat .auth-2 a,
+.main .landing_2 .auth .auth-2 a {
+  text-decoration: none;
+  color: var(--lwhite);
+  font-size: 0.8vw;
+}
+.main .landing_2 .new-chat .auth-2 a:hover,
+.main .landing_2 .auth .auth-2 a:hover {
+  text-decoration: underline;
+}
+.main .landing_2 .new-chat:hover,
+.main .landing_2 .auth:hover {
+  transform: scale(1.1);
+  background-color: var(--bodyh);
+  box-shadow: 0 0 20px rgb(15, 14, 14);
+}
+
+.footer {
+  border-top: 2px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.footer .foot-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.footer .foot-left .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-left: 100px;
+}
+.footer .foot-left .logo img {
+  height: 42px;
+  width: 40px;
+}
+.footer .foot-left .logo p {
+  font-size: 1.5vw;
+}
+.footer .foot-left .copyrights {
+  display: flex;
+  flex-direction: row;
+  color: var(--lwhite);
+  margin-left: 100px;
+}
+.footer .foot-left .copyrights p a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .foot-left .copyrights p a:hover {
+  text-decoration: underline;
+}
+.footer .foot-left .devcontact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--lwhite);
+  margin-left: 100px;
+}
+.footer .foot-left .devcontact [class^=c-] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.footer .foot-left .devcontact [class^=c-] a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .foot-left .devcontact [class^=c-] a:hover {
+  text-decoration: underline;
+}
+.footer .foot-right {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  gap: 15%;
+}
+.footer .foot-right [class^=r-] {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .foot-right [class^=r-] p {
+  margin-bottom: 5px;
+}
+.footer .foot-right [class^=r-] a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .foot-right [class^=r-] a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=home.css.map */
