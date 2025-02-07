@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/home.css'%}" />
+{% endblock %} {% block content %}
+<div class="main">
+  <div class="landing_1" style="height: 700px">
+    <p>
+      "😊 Here is your basic AI chat system! Feel free to have a conversation."
+    </p>
+    <div class="str-content">
+      <p>! Get started with vorex.</p>
+    </div>
+  </div>
+  <div class="landing_2" style="height: 400px">
+    <div class="new-chat">
+      <p>New</p>
+      <a href="{% url 'Chat' %}" class="chat-1">Start new chat.</a>
+      <small class="vorex">vorex-1-basic</small>
+    </div>
+    <div class="auth">
+      <p>Authentication</p>
+      <a href="{% url 'Auth' %}?action=signup" class="auth-1" id="signup"
+        >Create Account!</a
+      >
+      <div class="auth-2">
+        <a href="{% url 'Auth' %}?action=login" id="login">Login</a>/
+        <a href="{% url 'Auth' %}?action=signup" id="signup">Sign UP</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block footer %}
+<div class="footer">
+  <div class="foot-left">
+    <div class="logo">
+      <img src="{% static 'assets/main.png'%}" alt="logo" />
+      <p class="vorex">vorex</p>
+    </div>
+    <div class="icon-links">
+      <i></i>
+    </div>
+    <div class="copyrights">
+      <p>
+        &copy; 2024 <a href="/" class="vorex">VOREX</a>. All rights reserved.
+      </p>
+    </div>
+    <div class="devcontact">
+      <p>Developer contact:</p>
+      <div class="c-1">
+        <p>email:</p>
+        <a href="#">charantm8787@gmail.com</a>
+      </div>
+      <div class="c-2">
+        <p>GitHub:</p>
+        <a href="https://github.com/charantm7">charantm7</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-right">
+    <div class="r-1">
+      <p><b>Capabilities</b></p>
+      <a href="#">vorex Bs</a>
+      <a href="#">vorex Cmp</a>
+      <a href="#">vorex Dc</a>
+    </div>
+    <div class="r-2">
+      <p><b>Models</b></p>
+      <a href="#">Desktop</a>
+      <a href="#">Mobile</a>
+    </div>
+    <div class="r-3">
+      <p><b>Legal & Safety</b></p>
+      <a href="#">Privacy Policy </a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Report Vulnerabilities</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

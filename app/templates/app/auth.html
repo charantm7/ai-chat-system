@@ -1,0 +1,86 @@
+{% extends 'base.html' %} {% load static %}{% block link %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+{% endblock %} {% block content %}
+<div class="main">
+  <form action="Login" id="login-form">
+    <div class="body-left">
+      <div class="login-container">
+        <div class="login-top">
+          <img src="{% static 'assets/main.png'%}" alt="..." />
+          <p class="vorex">VOREX</p>
+        </div>
+        <div class="login-mid">
+          <label for="uname">Username</label>
+          <input type="text" for="uname" />
+          <label for="passowrd">Password</label>
+          <input type="password" for="passowrd" />
+        </div>
+        <div class="login-bottom">
+          <p>Don't have an account! <a href="#" id="signup">Sign up</a></p>
+          <button>Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="body-right">
+      <div class="r-top">
+        <p class="main-l">Login</p>
+        <p>Welcome Back,</p>
+        <p>Let's pick up where you left off!</p>
+      </div>
+    </div>
+  </form>
+  <form action="signup" id="signup-form">
+    <div class="body-left">
+      <div class="signup-container">
+        <div class="signup-top">
+          <img src="{% static 'assets/main.png'%}" alt="..." />
+          <p class="vorex">VOREX</p>
+        </div>
+        <div class="signup-mid">
+          <label for="uname">Username</label>
+          <input type="text" for="uname" />
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <label for="passowrd">Password</label>
+          <input type="password" for="passowrd" />
+          <label for="cpassowrd">Confirm Password</label>
+          <input type="password" for="cpassowrd" />
+        </div>
+        <div class="signup-bottom">
+          <p>Already have an account! <a href="#" id="login">Login</a></p>
+          <button>Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div class="body-right">
+      <div class="r-top">
+        <p class="main-l">Sign Up</p>
+        <p>Welcome Abroad,</p>
+        <p>Let's get you signed up & get started with vorex</p>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %} {% block footer %}
+<div class="footer">
+  <div class="f-1">
+    <img src="{% static 'assets/main.png'%}" alt="..." />
+    <p>VOREX</p>
+  </div>
+  <div class="f-2">
+    <p>&copy; 2024 <a href="/" class="vorex">VOREX</a>. All rights reserved.</p>
+  </div>
+  <div class="f-3">
+    <a href="#">Capabality</a>
+    <a href="#">Models</a>
+    <a href="#">Legal & Safety</a>
+  </div>
+  <div class="f-4">
+    <i>contact</i>
+    <p>email: <a href="#">charantm8787@gmail.com</a></p>
+  </div>
+</div>
+
+{% endblock %} {% block script %}
+<script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}

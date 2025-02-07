@@ -1,0 +1,252 @@
+.vorex {
+  font-family: "Orbitron", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: white;
+  --lwhite: #cacaca;
+  --llwhite: #88858555;
+  --black: black;
+  --green: green;
+  --body1: #161619;
+  --body: #292a2d;
+  --bodyh: #232426;
+  --border: #212327;
+  --side-bar-bg-hover: #d3d1d114;
+}
+
+.main {
+  border-top: 1px solid var(--border);
+  padding: 1% 0 4% 0;
+}
+.main #login-form {
+  flex-direction: row;
+  display: none;
+}
+.main #login-form .body-left {
+  width: 50%;
+}
+.main #login-form .body-left .login-container {
+  padding: 0 0 0 20%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main #login-form .body-left .login-container .login-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.main #login-form .body-left .login-container .login-top img {
+  height: 56px;
+  width: 54px;
+}
+.main #login-form .body-left .login-container .login-top p {
+  font-size: 2vw;
+}
+.main #login-form .body-left .login-container .login-mid {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+.main #login-form .body-left .login-container .login-mid input {
+  margin-bottom: 20px;
+  height: 35px;
+  outline: none;
+  padding: 0 60px 0 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--lwhite);
+  color: var(--white);
+  font-size: 15px;
+}
+.main #login-form .body-left .login-container .login-mid label {
+  font-size: 18px;
+}
+.main #login-form .body-left .login-container .login-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+.main #login-form .body-left .login-container .login-bottom button {
+  width: 60%;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+.main #login-form .body-left .login-container .login-bottom button:hover {
+  background-color: var(--lwhite);
+}
+.main #login-form .body-right {
+  width: 50%;
+}
+.main #login-form .body-right .r-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10% 0 0 0;
+  font-size: 1.5vw;
+}
+.main #login-form .body-right .main-l {
+  font-size: 2.4vw;
+  border-bottom: 1px solid white;
+  width: 12%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.main #login-form.open,
+.main #signup-form.open {
+  display: flex;
+}
+.main #signup-form {
+  display: none;
+  flex-direction: row;
+}
+.main #signup-form .body-left {
+  width: 50%;
+}
+.main #signup-form .body-left .signup-container {
+  padding: 0 0 0 20%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main #signup-form .body-left .signup-container .signup-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.main #signup-form .body-left .signup-container .signup-top img {
+  height: 56px;
+  width: 54px;
+}
+.main #signup-form .body-left .signup-container .signup-top p {
+  font-size: 2vw;
+}
+.main #signup-form .body-left .signup-container .signup-mid {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 5px;
+}
+.main #signup-form .body-left .signup-container .signup-mid input {
+  margin-bottom: 20px;
+  height: 35px;
+  outline: none;
+  padding: 0 60px 0 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--lwhite);
+  color: var(--white);
+  font-size: 15px;
+}
+.main #signup-form .body-left .signup-container .signup-mid label {
+  font-size: 18px;
+}
+.main #signup-form .body-left .signup-container .signup-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+.main #signup-form .body-left .signup-container .signup-bottom button {
+  width: 60%;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+.main #signup-form .body-left .signup-container .signup-bottom button:hover {
+  background-color: var(--lwhite);
+}
+.main #signup-form .body-right {
+  width: 50%;
+}
+.main #signup-form .body-right .r-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10% 0 0 0;
+  font-size: 1.5vw;
+}
+.main #signup-form .body-right .main-l {
+  font-size: 2.4vw;
+  border-bottom: 1px solid white;
+  width: 18%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--lwhite);
+  gap: 40px;
+  border-top: 1px solid var(--border);
+  padding: 10px;
+}
+.footer .f-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.footer .f-1 img {
+  width: 36px;
+  height: 38px;
+}
+.footer .f-2 p a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .f-2 p a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+.footer .f-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.footer .f-3 a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .f-3 a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+.footer .f-4 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer .f-4 p a {
+  text-decoration: none;
+  color: var(--lwhite);
+}
+.footer .f-4 p a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}/*# sourceMappingURL=auth.css.map */
